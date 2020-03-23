@@ -41,4 +41,9 @@ db.sports.updateOne(
   { $push: { team: { joueur: "vous" } } }
 );
 
-// je vois pas trop pour la dernière
+// fin
+
+db.sports.updateMany(
+  { requireTeams: "yes" },
+  { $set: { "team.$[].isCaptain": true } }
+);
