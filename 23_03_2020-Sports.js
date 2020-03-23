@@ -40,3 +40,5 @@ db.sports.updateOne(
   { requireTeams: "yes" },
   { $push: { team: { joueur: "vous" } } }
 );
+
+// je vois pas trop pour la dernière
